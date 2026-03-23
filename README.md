@@ -36,3 +36,10 @@ The analysis includes training architectural comparisons between VGG-19 and Alex
 * **Architectural Analysis:** Investigation into why deeper networks (VGG) separate content from style more effectively than shallower ones (AlexNet).
 
 * **GPU Acceleration:** High-performance training and inference utilizing NVIDIA RTX 4090.
+
+### Key Insights & Deep Learning Takeaways
+* **Hierarchical Feature Representation:** The project demonstrated that network depth is a critical factor in disentangling content from style. VGG-19’s deeper architecture allowed for a more sophisticated separation of semantic object boundaries (content) from low-level textural patterns (style) compared to shallower models.
+
+* **The Circular Validation Trap:** A significant finding was the tendency for shallower classifiers like AlexNet to over-prioritize broad textural features. This created a biased evaluation loop where the model assigned high confidence scores to structurally degraded images simply because they matched the "noise" profile it associated with the artist.
+
+* **Architectural Sensitivity in Style Transfer:** We observed that while VGG-19 acts as a "Strict Critic" due to its ability to learn complex shape hierarchies, AlexNet’s reliance on coarse filters makes it less robust for generative tasks that require fine-grained structural integrity.
